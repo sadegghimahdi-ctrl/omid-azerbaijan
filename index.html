@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="آموزشگاه زبان امید آذربایجان؛ یادگیری زبان با کلاس‌های کاربردی و استادان حرفه‌ای">
+  <title>آموزشگاه زبان امید آذربایجان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#"><span class="brand-mark">O</span><span><b>امید آذربایجان</b><small>OMID AZERBAIJAN</small></span></a>
+  <nav id="mainNav">
+    <a href="#home" data-fa="خانه" data-en="Home">خانه</a>
+    <a href="#courses" data-fa="دوره‌ها" data-en="Courses">دوره‌ها</a>
+    <a href="#announcements" data-fa="اطلاعیه‌ها" data-en="News">اطلاعیه‌ها</a>
+    <a href="#about" data-fa="درباره ما" data-en="About">درباره ما</a>
+    <a href="#contact" data-fa="تماس" data-en="Contact">تماس</a>
+  </nav>
+  <div class="header-actions">
+    <button class="lang-btn" id="langToggle">EN</button>
+    <button class="btn btn-outline" id="loginOpen">ورود / ثبت‌نام</button>
+    <button class="menu-btn" id="menuToggle" aria-label="منو">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <span class="eyebrow"><i></i> مسیر تازه‌ای برای آینده‌ات</span>
+    <h1>با زبان جدید،<br><em>دنیای تازه‌ای</em> بساز!</h1>
+    <p>در آموزشگاه امید آذربایجان، یادگیری زبان را با کلاس‌های پویا، استادان همراه و برنامه‌ای متناسب با هدف خودت تجربه کن.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#courses">مشاهده دوره‌ها <span>←</span></a><button class="btn btn-light" id="heroRegister">ثبت‌نام آنلاین</button></div>
+    <div class="hero-proof"><div class="avatars"><span>م</span><span>س</span><span>آ</span></div><div><b>شروع یک مسیر جدید</b><small>همین امروز به جمع زبان‌آموزان بپیوند</small></div></div>
+  </div>
+  <div class="hero-art manager-hero">
+    <div class="manager-photo-frame">
+      <img src="assets/manager.jpg" alt="مدیر آموزشگاه زبان امید آذربایجان" class="manager-photo">
+      <div class="manager-caption"><span class="manager-caption-icon">✦</span><div><b>مدیریت آموزشگاه</b><small>آموزشگاه زبان امید آذربایجان</small></div></div>
+    </div>
+    <div class="manager-floating manager-floating-top">✦ همراه شما در مسیر یادگیری</div>
+    <div class="manager-floating manager-floating-bottom"><b>OMID</b><span>Learn • Speak • Grow</span></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><b>کلاس‌های متنوع</b><span>برای سنین و سطوح مختلف</span></div>
+  <div><b>یادگیری کاربردی</b><span>تمرکز بر مکالمه و مهارت‌ها</span></div>
+  <div><b>پشتیبانی آموزشی</b><span>همراه شما در مسیر یادگیری</span></div>
+</section>
+
+<section class="section" id="courses">
+  <div class="section-heading"><div><span class="eyebrow">LEARNING PATHS</span><h2>دوره‌های آموزشی</h2><p>دوره مناسب خودت را پیدا کن و برای ثبت‌نام درخواست بده.</p></div><span class="heading-icon">✦</span></div>
+  <div class="course-grid" id="courseList">
+    <article class="course-card"><div class="course-icon blue">A<span>↗</span></div><span class="tag">انگلیسی</span><h3>زبان انگلیسی</h3><p>از سطح مقدماتی تا پیشرفته، با تمرکز بر مکالمه و چهار مهارت اصلی.</p><div class="course-foot"><span>سطوح مختلف</span><button class="text-btn" data-course="زبان انگلیسی">درخواست ثبت‌نام ←</button></div></article>
+    <article class="course-card"><div class="course-icon orange">你好</div><span class="tag orange-tag">ویژه نوجوانان</span><h3>زبان برای نوجوانان</h3><p>کلاس‌های پرانرژی با فعالیت‌های گروهی و محتوای متناسب با سن.</p><div class="course-foot"><span>نوجوانان</span><button class="text-btn" data-course="زبان برای نوجوانان">درخواست ثبت‌نام ←</button></div></article>
+    <article class="course-card"><div class="course-icon purple">Aa</div><span class="tag purple-tag">مکالمه</span><h3>مکالمه آزاد</h3><p>تقویت اعتمادبه‌نفس و روان صحبت‌کردن در موقعیت‌های روزمره.</p><div class="course-foot"><span>سطح‌بندی</span><button class="text-btn" data-course="مکالمه آزاد">درخواست ثبت‌نام ←</button></div></article>
+  </div>
+</section>
+
+<section class="announcement-section section" id="announcements">
+  <div class="section-heading"><div><span class="eyebrow">LATEST UPDATES</span><h2>تابلوی اطلاعیه‌ها</h2><p>آخرین خبرها و اطلاع‌رسانی‌های آموزشگاه</p></div></div>
+  <div id="announcementList" class="announcement-list"><article class="announcement"><span class="notice-dot"></span><div><b>به آموزشگاه امید آذربایجان خوش آمدید</b><p>اطلاعیه‌های جدید پس از انتشار توسط مدیریت در این بخش نمایش داده می‌شوند.</p><small>اطلاعیه عمومی</small></div></article></div>
+</section>
+
+<section class="about section" id="about"><div class="about-stamp">OMID<br>AZERBAIJAN</div><div><span class="eyebrow">ABOUT OUR INSTITUTE</span><h2>یادگیری، فراتر از کلاس درس</h2><p>ما باور داریم یادگیری زبان باید جذاب، هدفمند و قابل استفاده در زندگی واقعی باشد. در امید آذربایجان تلاش می‌کنیم مسیر یادگیری را برای زبان‌آموزان ساده‌تر و پربارتر کنیم.</p><a href="#contact" class="text-btn">با ما در ارتباط باش ←</a></div></section>
+
+<section class="contact section" id="contact"><div><span class="eyebrow">GET IN TOUCH</span><h2>سؤالی داری؟ با ما صحبت کن.</h2><p>برای اطلاع از زمان‌بندی کلاس‌ها و شرایط ثبت‌نام با آموزشگاه در ارتباط باش.</p></div><a class="btn btn-primary" href="mailto:info@example.com">ارسال پیام</a></section>
+</main>
+
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">O</span><span><b>امید آذربایجان</b><small>OMID AZERBAIJAN</small></span></a><span>© تمامی حقوق برای آموزشگاه امید آذربایجان محفوظ است.</span><span>Learn • Speak • Grow</span></footer>
+
+<div class="modal-backdrop" id="authModal" hidden>
+ <section class="modal">
+  <button class="modal-close" data-close aria-label="بستن">×</button>
+  <span class="eyebrow">STUDENT ACCOUNT</span><h2 id="authTitle">ورود به حساب</h2>
+  <form id="authForm">
+   <label>نام و نام خانوادگی<input id="fullName" autocomplete="name" placeholder="برای ثبت‌نام تکمیل کنید"></label>
+   <label>ایمیل<input id="email" type="email" required autocomplete="email" placeholder="name@example.com"></label>
+   <label>رمز عبور<input id="password" type="password" required minlength="6" autocomplete="current-password" placeholder="حداقل ۶ کاراکتر"></label>
+   <button class="btn btn-primary full" id="authSubmit">ورود</button>
+  </form>
+  <button class="switch-auth" id="authSwitch">حساب نداری؟ ثبت‌نام کن</button>
+  <p class="form-message" id="authMessage" role="status"></p>
+ </section>
+</div>
+
+<div class="modal-backdrop" id="enrollModal" hidden>
+ <section class="modal">
+  <button class="modal-close" data-close aria-label="بستن">×</button>
+  <span class="eyebrow">COURSE APPLICATION</span><h2>درخواست ثبت‌نام</h2>
+  <form id="enrollForm">
+   <label>نام و نام خانوادگی<input id="enrollName" required></label>
+   <label>شماره تماس<input id="enrollPhone" required inputmode="tel" placeholder="09xxxxxxxxx"></label>
+   <label>دوره موردنظر<select id="enrollCourse"><option>زبان انگلیسی</option><option>زبان برای نوجوانان</option><option>مکالمه آزاد</option></select></label>
+   <label>توضیحات<textarea id="enrollNote" rows="3" placeholder="سطح یا زمان مناسب خود را بنویسید"></textarea></label>
+   <button class="btn btn-primary full">ارسال درخواست</button>
+  </form><p class="form-message" id="enrollMessage" role="status"></p>
+ </section>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
